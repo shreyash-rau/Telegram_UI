@@ -1,0 +1,227 @@
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chats-container {
+  flex: 0 0 25%;
+  overflow-y: auto;
+  border-right: 1px solid #eea2a2;
+  height: 100vh;
+  padding: 20px;  /* Add some padding for better readability */
+}
+
+.chat-messages-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 75px;
+}
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .chats-container {
+    flex: 0 0 100%;
+  }
+
+  .chat-messages-container {
+    flex: 0 0 100%;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.custom-width-1 {
+  flex: 0 0 auto;
+}
+
+.custom-width-2 {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.custom-profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.custom-white:hover {
+  background-color: #3f3d35;
+}
+
+.custom-black:hover {
+  background-color: rgb(37, 37, 37);
+}
+
+.bi-telegram,
+.bi-brightness-low-fill,
+.custom-chat-message-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.bi-check-all {
+  font-size: 1rem;
+}
+
+.custom-transition {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.3s ease;
+}
+
+.custom-transition.show {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.custom-img-placeholder {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(216, 202, 202);
+}
+
+.custom-light-background {
+  background-color: #6ae26a;
+}
+
+.custom-dark-background {
+  background-color: #815b83;
+  color: rgb(233, 218, 218);
+}
+
+.custom-message-width {
+  min-width: 40px;
+  border-radius: 20px;
+   /* Add some padding and background color */
+   padding: 10px;
+   background-color: #f0f0f0;
+}
+
+.custom-time-font {
+  font-size: 13px;
+  /* Adjust color for better contrast */
+  color: #777;
+}
+
+
+.custom-navbar-light {
+  background-color: #6aa6b9;
+}
+
+.custom-navbar-dark {
+  background-color: #2e2323;
+}
+
+.custom-input-dark {
+  background-color: #202020;
+}
+
+.custom-bg-container {
+  background-image: url("./Images/background.jpeg");
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-bg-container-message {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.custom-chat-container {
+  background-image: url("./Images/background.jpeg");
+  opacity: 1;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.custom-bg-opacity {
+  opacity: 0.85;
+}
+
+input:focus {
+  border: 0;
+  outline: 0;
+}
+
+.bi-emoji-smile,
+.bi-camera,
+.bi-paperclip,
+.bi-arrow-left {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.custom-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  border-radius: 20px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+  height: 0px;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+/* Ripple effect for interactive elements */
+
+.ripple-container {
+  position: relative;
+  display: inline-block;
+}
+
+.ripple-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(24, 23, 23, 0.5);
+  transform: scale(0);
+  animation: ripple-animation 0.3s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
